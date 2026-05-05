@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>TRUFIX AUTO HUB LIMITED</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -22,11 +19,9 @@ body{
     line-height:1.6;
 }
 
-/* NAVIGATION */
-
 nav{
     background:#081c3a;
-    padding:15px 40px;
+    padding:16px 8%;
     position:sticky;
     top:0;
     z-index:999;
@@ -37,38 +32,44 @@ nav{
 
 nav .logo{
     color:white;
-    font-size:24px;
+    font-size:22px;
     font-weight:bold;
+}
+
+nav .logo span{
+    color:#ffcc00;
 }
 
 nav ul{
     list-style:none;
     display:flex;
-    gap:30px;
+    gap:28px;
 }
 
 nav ul li a{
     color:white;
     text-decoration:none;
     font-size:15px;
-    transition:0.3s;
 }
 
 nav ul li a:hover{
     color:#ffcc00;
 }
 
-/* BANNER */
+/* Banner 缩短处理 */
+.banner{
+    max-height:520px;
+    overflow:hidden;
+}
 
 .banner img{
     width:100%;
     display:block;
 }
 
-/* SECTION */
-
+/* 通用版块 */
 .section{
-    padding:70px 8%;
+    padding:80px 10%;
 }
 
 .section-title{
@@ -84,83 +85,60 @@ nav ul li a:hover{
 
 .section-title p{
     color:#666;
-    font-size:16px;
-}
-
-/* ABOUT */
-
-.about-box{
-    background:white;
-    padding:40px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.about-box p{
     font-size:17px;
 }
 
-/* BUTTON */
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 25px;
-    background:#d62828;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    transition:0.3s;
+.about-box{
+    background:white;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    font-size:17px;
 }
 
-.btn:hover{
-    background:#b71c1c;
-}
-
-/* SERVICES */
-
+/* 业务卡片 */
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    gap:28px;
 }
 
 .service-card{
     background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    padding:36px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    border-top:5px solid #081c3a;
     transition:0.3s;
 }
 
 .service-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
 }
 
 .service-card h3{
     color:#081c3a;
-    margin-bottom:15px;
-    font-size:24px;
+    margin-bottom:14px;
+    font-size:23px;
 }
 
 .service-card p{
     color:#555;
 }
 
-/* 5S SYSTEM */
-
+/* 5S */
 .system-box{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
+    gap:22px;
     text-align:center;
 }
 
 .system-item{
     background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    padding:32px 22px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
 .system-item h3{
@@ -168,24 +146,39 @@ nav ul li a:hover{
     margin-bottom:10px;
 }
 
-/* CONTACT */
+/* 管理能力 */
+.management{
+    background:white;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
 
+.management ul{
+    padding-left:22px;
+}
+
+.management li{
+    margin-bottom:10px;
+}
+
+/* 联系 */
 .contact{
     background:#081c3a;
     color:white;
-    padding:70px 8%;
+    padding:80px 10%;
 }
 
 .contact-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:28px;
 }
 
 .contact-box{
     background:rgba(255,255,255,0.08);
     padding:30px;
-    border-radius:15px;
+    border-radius:18px;
 }
 
 .contact-box h3{
@@ -193,314 +186,225 @@ nav ul li a:hover{
     color:#ffcc00;
 }
 
-/* FOOTER */
+.whatsapp-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:13px 24px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
 
 footer{
     background:#04101f;
     color:#ccc;
     text-align:center;
-    padding:20px;
+    padding:25px;
     font-size:14px;
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
 
-nav{
-    flex-direction:column;
-    gap:15px;
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .section{
+        padding:55px 6%;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .banner{
+        max-height:360px;
+    }
 }
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
-
-.section-title h2{
-    font-size:30px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <nav>
-
-<div class="logo">
-TRUFIX AUTO HUB LIMITED
-</div>
-
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#system">5S System</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
+    <div class="logo">TRUFIX AUTO HUB <span>LIMITED</span></div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#system">5S System</a></li>
+        <li><a href="#management">Management</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<!-- BANNER -->
-
 <div class="banner">
-
-<img src="banner1.png?v=20260506" alt="TRUFIX AUTO HUB LIMITED Banner">
-
+    <img src="banner1.png?v=20260506" alt="TRUFIX AUTO HUB LIMITED Banner">
 </div>
-
-<!-- ABOUT -->
 
 <section class="section" id="about">
+    <div class="section-title">
+        <h2>Company Overview</h2>
+        <p>Professional Automotive Solutions in Papua New Guinea</p>
+    </div>
 
-<div class="section-title">
-
-<h2>Company Overview</h2>
-
-<p>
-Professional Automotive Solutions in Papua New Guinea
-</p>
-
-</div>
-
-<div class="about-box">
-
-<p>
-
-TRUFIX AUTO HUB LIMITED is a professional automotive service company based in Lae, Papua New Guinea.
-
-We specialize in vehicle repair and maintenance, body paint services, automotive spare parts supply, engineering vehicle parts, and quality used vehicle sales.
-
-Our company is committed to delivering reliable service, professional workmanship, high-quality parts, and fast response support for both individual and business customers.
-
-</p>
-
-<a href="#contact" class="btn">
-Contact Us
-</a>
-
-</div>
-
+    <div class="about-box">
+        <p>
+            TRUFIX AUTO HUB LIMITED is a professional automotive service company based in Lae,
+            Papua New Guinea. We provide vehicle repair and maintenance, body paint services,
+            automotive spare parts supply, engineering vehicle parts, and quality used vehicle sales.
+        </p>
+        <br>
+        <p>
+            We serve individual customers, corporate clients, fleet operators, construction contractors,
+            and project customers with reliable service, professional workmanship, quality parts,
+            and responsive support.
+        </p>
+    </div>
 </section>
-
-<!-- SERVICES -->
 
 <section class="section" id="services">
+    <div class="section-title">
+        <h2>Our Business Areas</h2>
+        <p>Four main business divisions supporting customers in Lae and PNG</p>
+    </div>
 
-<div class="section-title">
+    <div class="services">
+        <div class="service-card">
+            <h3>Vehicle Repair & Body Paint</h3>
+            <p>
+                Complete vehicle maintenance, diagnostics, engine repair, brake service,
+                suspension repair, air-conditioning service, panel beating, and professional spray painting.
+            </p>
+        </div>
 
-<h2>Our Business Areas</h2>
+        <div class="service-card">
+            <h3>Automotive Parts</h3>
+            <p>
+                Supply of high-quality automotive spare parts including filters, oils,
+                batteries, brake parts, suspension parts, belts, hoses, and electrical components.
+            </p>
+        </div>
 
-<p>
-Comprehensive automotive and engineering solutions
-</p>
+        <div class="service-card">
+            <h3>Engineering Vehicle Parts</h3>
+            <p>
+                Supply of engineering and heavy equipment parts for excavators, loaders,
+                trucks, hydraulic systems, and construction machinery.
+            </p>
+        </div>
 
-</div>
-
-<div class="services">
-
-<div class="service-card">
-
-<h3>Vehicle Repair & Body Paint</h3>
-
-<p>
-Complete repair, maintenance, diagnostics, brake service, engine repair, suspension repair, and professional body paint solutions.
-</p>
-
-</div>
-
-<div class="service-card">
-
-<h3>Automotive Parts</h3>
-
-<p>
-Supply of reliable and high-quality automotive spare parts for major Japanese, Korean, and European vehicle brands.
-</p>
-
-</div>
-
-<div class="service-card">
-
-<h3>Engineering Vehicle Parts</h3>
-
-<p>
-Heavy equipment and engineering machinery parts supply for excavators, loaders, trucks, and industrial vehicles.
-</p>
-
-</div>
-
-<div class="service-card">
-
-<h3>Quality Used Cars</h3>
-
-<p>
-Professionally inspected and maintained quality used vehicle sales with reliable customer support.
-</p>
-
-</div>
-
-</div>
-
+        <div class="service-card">
+            <h3>Quality Used Cars</h3>
+            <p>
+                Inspected and reliable used vehicle sales for personal, commercial,
+                corporate, and fleet customers.
+            </p>
+        </div>
+    </div>
 </section>
-
-<!-- 5S SYSTEM -->
 
 <section class="section" id="system">
+    <div class="section-title">
+        <h2>Our 5S Service System</h2>
+        <p>Professional management and service standards</p>
+    </div>
 
-<div class="section-title">
+    <div class="system-box">
+        <div class="system-item">
+            <h3>Service</h3>
+            <p>Comprehensive and customer-focused automotive service.</p>
+        </div>
 
-<h2>Our 5S Service System</h2>
+        <div class="system-item">
+            <h3>Spare Parts</h3>
+            <p>Reliable parts supply with quality and stock support.</p>
+        </div>
 
-<p>
-Professional management and customer-focused service standards
-</p>
+        <div class="system-item">
+            <h3>Safety</h3>
+            <p>Inspection procedures and safety-first workshop operations.</p>
+        </div>
 
-</div>
+        <div class="system-item">
+            <h3>Swift Repair</h3>
+            <p>Fast diagnostics and efficient repair turnaround.</p>
+        </div>
 
-<div class="system-box">
-
-<div class="system-item">
-
-<h3>Service</h3>
-
-<p>
-Comprehensive and professional customer service.
-</p>
-
-</div>
-
-<div class="system-item">
-
-<h3>Spare Parts</h3>
-
-<p>
-Reliable and high-quality spare parts supply.
-</p>
-
-</div>
-
-<div class="system-item">
-
-<h3>Safety</h3>
-
-<p>
-Inspection procedures and safety-first operations.
-</p>
-
-</div>
-
-<div class="system-item">
-
-<h3>Swift Repair</h3>
-
-<p>
-Fast diagnostics and efficient repair services.
-</p>
-
-</div>
-
-<div class="system-item">
-
-<h3>Support</h3>
-
-<p>
-After-service support and 24/7 roadside assistance.
-</p>
-
-</div>
-
-</div>
-
+        <div class="system-item">
+            <h3>Support</h3>
+            <p>After-service care and 24/7 roadside assistance.</p>
+        </div>
+    </div>
 </section>
 
-<!-- CONTACT -->
+<section class="section" id="management">
+    <div class="section-title">
+        <h2>Management & Service Commitment</h2>
+        <p>Reliable process, transparent communication, accountable service</p>
+    </div>
+
+    <div class="management">
+        <ul>
+            <li>Transparent pricing and clear communication with customers.</li>
+            <li>Documented repair process and accountable service delivery.</li>
+            <li>Support for fleet maintenance and corporate service programs.</li>
+            <li>Responsive service for customers in Lae and surrounding areas.</li>
+            <li>Reliable after-service support and long-term customer care.</li>
+            <li>Strong local presence with service, parts, and vehicle solutions.</li>
+        </ul>
+    </div>
+</section>
 
 <section class="contact" id="contact">
+    <div class="section-title">
+        <h2 style="color:white;">Contact Information</h2>
+        <p style="color:#ddd;">We welcome inquiries from individual customers and corporate clients.</p>
+    </div>
 
-<div class="section-title">
+    <div class="contact-grid">
+        <div class="contact-box">
+            <h3>Address</h3>
+            <p>
+                Lot 13 Section 15,<br>
+                Able Tasman Street,<br>
+                Lae, Morobe Province 411,<br>
+                Papua New Guinea
+            </p>
+        </div>
 
-<h2 style="color:white;">
-Contact Information
-</h2>
+        <div class="contact-box">
+            <h3>Phone / WhatsApp</h3>
+            <p>
+                +675 7936 0000<br>
+                24/7 Assistance Hotline
+            </p>
+        </div>
 
-<p style="color:#ddd;">
-We welcome business inquiries and customer support requests.
-</p>
+        <div class="contact-box">
+            <h3>Email</h3>
+            <p>trufix.automotor.png@gmail.com</p>
+        </div>
 
-</div>
+        <div class="contact-box">
+            <h3>Facebook</h3>
+            <p>TRUFIX AUTO HUB-LAE</p>
+        </div>
+    </div>
 
-<div class="contact-grid">
-
-<div class="contact-box">
-
-<h3>Address</h3>
-
-<p>
-
-Lot 13 Section 15,<br>
-Able Tasman Street,<br>
-Lae, Morobe Province 411,<br>
-Papua New Guinea
-
-</p>
-
-</div>
-
-<div class="contact-box">
-
-<h3>Phone</h3>
-
-<p>
-
-+675 7936 0000<br>
-24/7 Assistance Hotline
-
-</p>
-
-</div>
-
-<div class="contact-box">
-
-<h3>Email</h3>
-
-<p>
-
-trufix.automotor.png@gmail.com
-
-</p>
-
-</div>
-
-<div class="contact-box">
-
-<h3>Facebook</h3>
-
-<p>
-
-TRUFIX AUTO HUB-LAE
-
-</p>
-
-</div>
-
-</div>
-
+    <a href="https://wa.me/67579360000" class="whatsapp-btn">Contact Us on WhatsApp</a>
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-
-© 2026 TRUFIX AUTO HUB LIMITED. All Rights Reserved.
-
+    © 2026 TRUFIX AUTO HUB LIMITED. All Rights Reserved.
 </footer>
 
 </body>
-
 </html>
