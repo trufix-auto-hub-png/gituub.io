@@ -6,7 +6,6 @@
 <title>TRUFIX AUTO HUB LIMITED</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -19,8 +18,6 @@ body{
     color:#222;
     line-height:1.6;
 }
-
-/* NAVIGATION */
 
 nav{
     background:#081c3a;
@@ -57,17 +54,11 @@ nav ul li a:hover{
     color:#ffcc00;
 }
 
-/* BANNER */
-
 .banner img{
     width:100%;
     display:block;
-    max-height:620px;
-    object-fit:cover;
-    object-position:center;
+    height:auto;
 }
-
-/* GENERAL */
 
 .section{
     padding:80px 10%;
@@ -98,8 +89,8 @@ nav ul li a:hover{
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:22px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:28px;
 }
 
 .card{
@@ -118,7 +109,7 @@ nav ul li a:hover{
 .card h3{
     color:#081c3a;
     margin-bottom:14px;
-    font-size:18px;
+    font-size:22px;
 }
 
 .card p{
@@ -132,8 +123,6 @@ ul{
 li{
     margin-bottom:10px;
 }
-
-/* CONTACT */
 
 .contact{
     background:#081c3a;
@@ -176,8 +165,6 @@ li{
     background:#1da851;
 }
 
-/* FOOTER */
-
 footer{
     background:#04101f;
     color:#ccc;
@@ -186,448 +173,255 @@ footer{
     font-size:14px;
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
 
-nav{
-    flex-direction:column;
-    gap:15px;
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:14px;
+    }
+
+    .section{
+        padding:55px 6%;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
 }
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:14px;
-}
-
-.section{
-    padding:55px 6%;
-}
-
-.section-title h2{
-    font-size:30px;
-}
-
-.banner img{
-    max-height:420px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <nav>
-
-<div class="logo">
-TRUFIX AUTO HUB LIMITED
-</div>
+<div class="logo">TRUFIX AUTO HUB LIMITED</div>
 
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="#management">5S Management</a></li>
-<li><a href="#fleet">Fleet Support</a></li>
 <li><a href="#parts">Spare Parts</a></li>
+<li><a href="#fleet">Fleet Support</a></li>
+<li><a href="#management">5S Management</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
-<!-- BANNER -->
-
 <div class="banner">
-
 <img src="banner2.png?v=20260506" alt="TRUFIX AUTO HUB LIMITED Banner">
-
 </div>
-
-<!-- ABOUT -->
 
 <section class="section" id="about">
-
 <div class="section-title">
-
 <h2>About Company</h2>
-
-<p>
-Professional Automotive Solutions in Papua New Guinea
-</p>
-
+<p>Professional Automotive Solutions in Papua New Guinea</p>
 </div>
 
 <div class="box">
-
 <p>
-TRUFIX AUTO HUB LIMITED is a professional automotive service company based in Lae,
-Papua New Guinea.
+TRUFIX AUTO HUB LIMITED is a professional automotive service company based in Lae, Papua New Guinea.
 </p>
-
 <br>
-
 <p>
-We specialize in vehicle repair and maintenance, body paint services,
-automotive spare parts supply, heavy equipment parts support,
-and quality used vehicle sales.
+We specialize in vehicle repair and maintenance, body paint services, automotive spare parts supply,
+heavy equipment parts support, and quality used vehicle sales.
 </p>
-
 <br>
-
 <p>
-Our company is committed to delivering reliable service,
-professional workmanship, and long-term support for both individual customers
-and commercial clients across Papua New Guinea.
+Our company is committed to delivering reliable service, professional workmanship, and long-term support
+for both individual customers and commercial clients across Papua New Guinea.
 </p>
-
 </div>
-
 </section>
-
-<!-- SERVICES -->
 
 <section class="section" id="services">
-
 <div class="section-title">
-
 <h2>Our Services</h2>
-
-<p>
-Comprehensive automotive and engineering solutions
-</p>
-
+<p>Comprehensive automotive and engineering solutions</p>
 </div>
 
 <div class="grid">
-
 <div class="card">
-
 <h3>Vehicle Repair</h3>
-
 <p>
-Professional diagnostics, engine repair, brake service,
-suspension repair, electrical troubleshooting,
+Professional diagnostics, engine repair, brake service, suspension repair, electrical troubleshooting,
 and scheduled maintenance.
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Body Paint & Panel Work</h3>
-
 <p>
-Quality body repair, accident restoration,
-repainting, polishing, and vehicle appearance enhancement.
+Quality body repair, accident restoration, repainting, polishing, and vehicle appearance enhancement.
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Auto Parts Supply</h3>
-
 <p>
-Reliable spare parts, filters, lubricants,
-batteries, tires, and automotive accessories
-for major vehicle brands.
+Reliable spare parts, filters, lubricants, batteries, tires, and automotive accessories for major vehicle brands.
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Heavy Equipment Parts</h3>
-
 <p>
-Components and spare parts support for excavators,
-loaders, industrial vehicles,
-and construction equipment.
+Components and spare parts support for excavators, loaders, industrial vehicles, and construction equipment.
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Quality Used Vehicles</h3>
-
 <p>
-Inspection-supported quality used vehicle sales
-for private, commercial, and project use.
+Inspection-supported quality used vehicle sales for private, commercial, and project use.
 </p>
-
 </div>
-
 </div>
-
 </section>
 
-<!-- 5S MANAGEMENT -->
-
-<section class="section" id="management">
-
+<section class="section" id="parts">
 <div class="section-title">
-
-<h2>5S Management System</h2>
-
-<p>
-Professional management and customer-focused service standards
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Sort</h3>
-
-<p>
-Maintain an organized working environment
-by removing unnecessary items.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Set in Order</h3>
-
-<p>
-Arrange tools, equipment, and materials systematically
-for efficient operations.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Shine</h3>
-
-<p>
-Ensure workshop cleanliness, safety,
-and professional presentation standards.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Standardize</h3>
-
-<p>
-Implement consistent procedures
-and operational controls across service areas.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Sustain</h3>
-
-<p>
-Promote continuous improvement,
-discipline, and long-term operational excellence.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FLEET SUPPORT -->
-
-<section class="section" id="fleet">
-
-<div class="section-title">
-
-<h2>Fleet Support</h2>
-
-<p>
-Reliable service support for business and project customers
-</p>
-
+<h2>Spare Parts Supply</h2>
+<p>Automotive and heavy equipment parts support</p>
 </div>
 
 <div class="box">
+<p>
+We supply quality automotive and heavy equipment spare parts for major brands and common vehicle models
+operating in Papua New Guinea.
+</p>
+<br>
+<ul>
+<li>Toyota parts</li>
+<li>Nissan parts</li>
+<li>Mitsubishi parts</li>
+<li>Isuzu parts</li>
+<li>Ford parts</li>
+<li>Filters, oils, batteries, belts and hoses</li>
+<li>Excavator, loader and heavy equipment components</li>
+<li>Hydraulic hose and engineering parts support</li>
+</ul>
+<br>
+<p>
+Our spare parts solutions focus on reliability, durability, and operational efficiency.
+</p>
+</div>
+</section>
 
+<section class="section" id="fleet">
+<div class="section-title">
+<h2>Fleet Support</h2>
+<p>Reliable service support for business and project customers</p>
+</div>
+
+<div class="box">
 <p>
 TRUFIX AUTO HUB LIMITED provides maintenance and repair support for:
 </p>
-
 <br>
-
 <ul>
-
 <li>Corporate vehicle fleets</li>
-
 <li>Construction projects</li>
-
 <li>Mining and industrial operations</li>
-
 <li>Commercial transport operators</li>
-
 <li>Government and project vehicles</li>
-
 </ul>
-
 <br>
-
 <p>
-Our team is committed to minimizing downtime
-and ensuring reliable vehicle performance
-for daily business operations.
+Our team is committed to minimizing downtime and ensuring reliable vehicle performance for daily business operations.
 </p>
-
 </div>
-
 </section>
 
-<!-- SPARE PARTS -->
-
-<section class="section" id="parts">
-
+<section class="section" id="management">
 <div class="section-title">
-
-<h2>Spare Parts Supply</h2>
-
-<p>
-Automotive and heavy equipment parts support
-</p>
-
-</div>
-
-<div class="box">
-
-<p>
-We supply quality automotive and heavy equipment spare parts
-for major brands and common vehicle models operating in Papua New Guinea.
-</p>
-
-<br>
-
-<ul>
-
-<li>Toyota parts</li>
-
-<li>Nissan parts</li>
-
-<li>Mitsubishi parts</li>
-
-<li>Isuzu parts</li>
-
-<li>Ford parts</li>
-
-<li>Filters, oils, batteries, belts and hoses</li>
-
-<li>Excavator, loader and heavy equipment components</li>
-
-<li>Hydraulic hose and engineering parts support</li>
-
-</ul>
-
-<br>
-
-<p>
-Our spare parts solutions focus on reliability,
-durability, and operational efficiency.
-</p>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="section-title">
-
-<h2>Contact Us</h2>
-
-<p>
-We welcome inquiries from individual customers and corporate clients.
-</p>
-
+<h2>5S Management System</h2>
+<p>Professional management and customer-focused service standards</p>
 </div>
 
 <div class="grid">
+<div class="card">
+<h3>Sort</h3>
+<p>Maintain an organized working environment by removing unnecessary items.</p>
+</div>
 
+<div class="card">
+<h3>Set in Order</h3>
+<p>Arrange tools, equipment, and materials systematically for efficient operations.</p>
+</div>
+
+<div class="card">
+<h3>Shine</h3>
+<p>Ensure workshop cleanliness, safety, and professional presentation standards.</p>
+</div>
+
+<div class="card">
+<h3>Standardize</h3>
+<p>Implement consistent procedures and operational controls across service areas.</p>
+</div>
+
+<div class="card">
+<h3>Sustain</h3>
+<p>Promote continuous improvement, discipline, and long-term operational excellence.</p>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>We welcome inquiries from individual customers and corporate clients.</p>
+</div>
+
+<div class="grid">
 <div class="contact-box">
-
 <h3>Address</h3>
-
 <p>
 Lot 13 Section 15,<br>
 Able Tasman Street,<br>
 Lae, Morobe Province 411,<br>
 Papua New Guinea
 </p>
-
 </div>
 
 <div class="contact-box">
-
 <h3>Phone / WhatsApp</h3>
-
 <p>
 +675 7936 0000<br>
 24/7 Assistance Hotline
 </p>
-
 </div>
 
 <div class="contact-box">
-
 <h3>Email</h3>
-
-<p>
-trufix.automotor.png@gmail.com
-</p>
-
+<p>trufix.automotor.png@gmail.com</p>
 </div>
 
 <div class="contact-box">
-
 <h3>Facebook</h3>
-
-<p>
-TRUFIX AUTO HUB-LAE
-</p>
-
+<p>TRUFIX AUTO HUB-LAE</p>
 </div>
 
 <div class="contact-box">
-
 <h3>Business Hours</h3>
-
 <p>
 Mon - Sat : 8:00 AM - 5:00 PM<br>
 24/7 Roadside Assistance Available
 </p>
-
 </div>
-
 </div>
 
 <a href="https://wa.me/67579360000" class="whatsapp-btn">
 Contact Us on WhatsApp
 </a>
-
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-
 © 2026 TRUFIX AUTO HUB LIMITED. All Rights Reserved.
-
 </footer>
 
 </body>
