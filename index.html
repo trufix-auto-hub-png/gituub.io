@@ -15,9 +15,13 @@ body{
     line-height:1.6;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 nav{
     background:#081c3a;
-    padding:16px 8%;
+    padding:16px 7%;
     position:sticky;
     top:0;
     z-index:999;
@@ -30,12 +34,13 @@ nav .logo{
     color:white;
     font-size:22px;
     font-weight:bold;
+    white-space:nowrap;
 }
 
 nav ul{
     list-style:none;
     display:flex;
-    gap:20px;
+    gap:18px;
 }
 
 nav ul li a{
@@ -45,7 +50,9 @@ nav ul li a{
     font-weight:600;
 }
 
-nav ul li a:hover{color:#ffcc00;}
+nav ul li a:hover{
+    color:#ffcc00;
+}
 
 .banner{
     background:#081c3a;
@@ -61,7 +68,8 @@ nav ul li a:hover{color:#ffcc00;}
 }
 
 .section{
-    padding:80px 10%;
+    padding:85px 10%;
+    scroll-margin-top:90px;
 }
 
 .section-title{
@@ -95,7 +103,7 @@ nav ul li a:hover{color:#ffcc00;}
 
 .card{
     background:white;
-    padding:34px;
+    padding:30px;
     border-radius:18px;
     box-shadow:0 8px 25px rgba(0,0,0,0.08);
     border-top:5px solid #081c3a;
@@ -107,34 +115,52 @@ nav ul li a:hover{color:#ffcc00;}
     font-size:22px;
 }
 
-.card p{color:#555;}
+.card p{
+    color:#555;
+}
 
-ul{padding-left:22px;}
-li{margin-bottom:10px;}
+.five-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:22px;
+}
 
 .contact{
     background:#081c3a;
     color:white;
-    padding:80px 10%;
+    padding:85px 7%;
+    scroll-margin-top:90px;
 }
 
-.contact .section-title h2{color:white;}
-.contact .section-title p{color:#ddd;}
+.contact .section-title h2{
+    color:white;
+}
+
+.contact .section-title p{
+    color:#ddd;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:22px;
+}
 
 .contact-box{
     background:rgba(255,255,255,0.08);
-    padding:30px;
+    padding:26px;
     border-radius:18px;
 }
 
 .contact-box h3{
     color:#ffcc00;
     margin-bottom:14px;
+    font-size:20px;
 }
 
 .whatsapp-btn{
     display:inline-block;
-    margin-top:30px;
+    margin-top:35px;
     padding:13px 24px;
     background:#25D366;
     color:white;
@@ -151,7 +177,15 @@ footer{
     font-size:14px;
 }
 
-@media(max-width:768px){
+ul{
+    padding-left:22px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+@media(max-width:1100px){
     nav{
         flex-direction:column;
         gap:15px;
@@ -160,9 +194,15 @@ footer{
     nav ul{
         flex-wrap:wrap;
         justify-content:center;
-        gap:14px;
     }
 
+    .five-grid,
+    .contact-grid{
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    }
+}
+
+@media(max-width:768px){
     .section{
         padding:55px 6%;
     }
@@ -210,14 +250,11 @@ TRUFIX AUTO HUB LIMITED is a professional automotive service company based in La
 </p>
 <br>
 <p>
-We provide vehicle repair and maintenance, body paint services, automotive parts supply,
-heavy equipment parts support, and quality used vehicle sales.
+We provide vehicle repair and maintenance, body paint services, automotive parts supply, heavy equipment parts support, hydraulic hose services, quality used vehicle sales, and roadside assistance.
 </p>
 <br>
 <p>
-Our company is committed to reliable service, professional workmanship, transparent communication,
-and long-term support for individual customers, business clients, fleet operators,
-construction companies, and project customers.
+Our company is committed to reliable service, professional workmanship, transparent communication, safety-focused operations, and long-term support for individual customers, business clients, fleet operators, construction companies, and project customers.
 </p>
 </div>
 </section>
@@ -230,18 +267,15 @@ construction companies, and project customers.
 
 <div class="box">
 <p>
-TRUFIX AUTO HUB LIMITED provides professional vehicle repair and maintenance services
-for private customers, commercial operators, and fleet vehicles in Papua New Guinea.
+TRUFIX AUTO HUB LIMITED provides professional vehicle repair and maintenance services for private customers, commercial operators, and fleet vehicles in Papua New Guinea.
 </p>
 <br>
 <p>
-Our workshop services include diagnostics, engine repair, brake service, suspension repair,
-electrical troubleshooting, air-conditioning service, body paint, and panel work.
+Our workshop services include engine service, diagnostics, brake service, suspension and steering repair, electrical troubleshooting, air-conditioning service, cooling system repair, fast maintenance, body paint, and panel work.
 </p>
 <br>
 <p>
-We focus on reliable workmanship, efficient repair turnaround, and practical support
-for daily vehicle operations.
+We focus on reliable workmanship, efficient repair turnaround, practical maintenance support, and accountable service for daily vehicle operations.
 </p>
 </div>
 </section>
@@ -249,23 +283,24 @@ for daily vehicle operations.
 <section class="section" id="parts">
 <div class="section-title">
 <h2>Parts Supply</h2>
-<p>Automotive and heavy equipment parts support</p>
+<p>Automotive spare parts and heavy equipment components</p>
 </div>
 
 <div class="box">
 <p>
-We supply automotive spare parts and heavy equipment components for commercial,
-industrial, and fleet operations across Papua New Guinea.
+We supply automotive spare parts and heavy equipment components for commercial, industrial, and fleet operations across Papua New Guinea.
 </p>
 <br>
 <p>
-Our parts support includes filters, lubricants, batteries, belts, hoses,
-suspension components, engine parts, and construction equipment components.
+Our automotive parts support includes engine parts, electrical parts, brake parts, suspension parts, filters, lubricants, batteries, belts, hoses, cooling system components, and common wear items.
 </p>
 <br>
 <p>
-We support major vehicle and equipment brands commonly used in PNG,
-with a focus on reliability, availability, and operational efficiency.
+Our heavy equipment parts support includes components for excavators, loaders, compact machinery, hydraulic systems, construction equipment, hydraulic hoses, filters, wear parts, and engine or system components.
+</p>
+<br>
+<p>
+We focus on reliability, availability, durability, and operational efficiency for customers who depend on vehicles and equipment every day.
 </p>
 </div>
 </section>
@@ -273,22 +308,20 @@ with a focus on reliability, availability, and operational efficiency.
 <section class="section" id="vehicles">
 <div class="section-title">
 <h2>Quality Used Vehicles</h2>
-<p>Reliable vehicles for private and commercial customers</p>
+<p>Reliable vehicles for private, commercial, and fleet customers</p>
 </div>
 
 <div class="box">
 <p>
-TRUFIX AUTO HUB LIMITED provides inspected and reliable used vehicles
-for private customers, business operators, and fleet buyers.
+TRUFIX AUTO HUB LIMITED provides inspected and reliable used vehicles for private customers, business operators, and fleet buyers.
 </p>
 <br>
 <p>
-We focus on vehicle quality, practical performance, and long-term customer value.
+We focus on vehicle quality, practical performance, serviceability, and long-term customer value.
 </p>
 <br>
 <p>
-Our vehicle solutions are suitable for personal transportation, commercial use,
-project operations, and business fleet support.
+Our vehicle solutions are suitable for personal transportation, commercial operations, construction projects, business fleets, and general PNG road conditions.
 </p>
 </div>
 </section>
@@ -300,7 +333,9 @@ project operations, and business fleet support.
 </div>
 
 <div class="box">
-<p>TRUFIX AUTO HUB LIMITED supports:</p>
+<p>
+TRUFIX AUTO HUB LIMITED supports:
+</p>
 <br>
 <ul>
 <li>Corporate vehicle fleets</li>
@@ -308,13 +343,11 @@ project operations, and business fleet support.
 <li>Commercial transport operators</li>
 <li>Mining and industrial operations</li>
 <li>Government and project vehicles</li>
-<li>Business customers requiring repair, parts and maintenance support</li>
+<li>Business customers requiring repair, parts, maintenance, and service reporting support</li>
 </ul>
 <br>
 <p>
-Our team focuses on reducing downtime, improving vehicle reliability,
-and supporting daily operations through practical maintenance, parts availability,
-and responsive service.
+Our team focuses on reducing downtime, improving vehicle reliability, supporting preventive maintenance, and helping customers keep their daily operations running.
 </p>
 </div>
 </section>
@@ -325,7 +358,7 @@ and responsive service.
 <p>Professional management and customer-focused service standards</p>
 </div>
 
-<div class="grid">
+<div class="five-grid">
 <div class="card">
 <h3>Sort</h3>
 <p>Maintain an organized working environment by removing unnecessary items.</p>
@@ -333,12 +366,12 @@ and responsive service.
 
 <div class="card">
 <h3>Set in Order</h3>
-<p>Arrange tools, equipment and materials systematically for efficient operations.</p>
+<p>Arrange tools, equipment, and materials systematically for efficient operations.</p>
 </div>
 
 <div class="card">
 <h3>Shine</h3>
-<p>Ensure workshop cleanliness, safety and professional presentation standards.</p>
+<p>Ensure workshop cleanliness, safety, and professional presentation standards.</p>
 </div>
 
 <div class="card">
@@ -348,7 +381,7 @@ and responsive service.
 
 <div class="card">
 <h3>Sustain</h3>
-<p>Promote continuous improvement, discipline and long-term operational excellence.</p>
+<p>Promote continuous improvement, discipline, and long-term operational excellence.</p>
 </div>
 </div>
 </section>
@@ -359,7 +392,7 @@ and responsive service.
 <p>We welcome inquiries from individual customers and corporate clients.</p>
 </div>
 
-<div class="grid">
+<div class="contact-grid">
 <div class="contact-box">
 <h3>Address</h3>
 <p>
@@ -391,7 +424,8 @@ Papua New Guinea
 <div class="contact-box">
 <h3>Business Hours</h3>
 <p>
-Mon - Sat : 8:00 AM - 5:00 PM<br>
+Mon - Sat:<br>
+8:00 AM - 5:00 PM<br>
 24/7 Roadside Assistance Available
 </p>
 </div>
