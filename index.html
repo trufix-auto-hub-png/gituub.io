@@ -1,22 +1,27 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRUFIX AUTO HUB LIMITED</title>
+<title>TRUFIX PNG | Truck & Auto Repair in Lae</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-    font-family:Arial, sans-serif;
-    background:#f5f7fa;
-    color:#222;
-    line-height:1.6;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
     scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fa;
+    color:#222;
+    line-height:1.7;
 }
 
 nav{
@@ -30,9 +35,9 @@ nav{
     align-items:center;
 }
 
-nav .logo{
+.logo{
     color:white;
-    font-size:22px;
+    font-size:24px;
     font-weight:bold;
     white-space:nowrap;
 }
@@ -41,6 +46,7 @@ nav ul{
     list-style:none;
     display:flex;
     gap:18px;
+    flex-wrap:wrap;
 }
 
 nav ul li a{
@@ -56,15 +62,68 @@ nav ul li a:hover{
 
 .banner{
     background:#081c3a;
-    overflow:hidden;
+    position:relative;
 }
 
 .banner img{
     width:100%;
-    max-height:650px;
-    object-fit:contain;
+    max-height:700px;
+    object-fit:cover;
     display:block;
-    margin:auto;
+}
+
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    width:90%;
+}
+
+.hero-text h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s ease;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebe5d;
+}
+
+.call-btn{
+    background:#ffcc00;
+    color:#081c3a;
+}
+
+.call-btn:hover{
+    background:#f5b800;
 }
 
 .section{
@@ -78,14 +137,14 @@ nav ul li a:hover{
 }
 
 .section-title h2{
-    font-size:36px;
+    font-size:38px;
     color:#081c3a;
     margin-bottom:10px;
 }
 
 .section-title p{
     color:#666;
-    font-size:17px;
+    font-size:18px;
 }
 
 .box{
@@ -119,17 +178,59 @@ nav ul li a:hover{
     color:#555;
 }
 
-.five-grid{
+.breakdown{
+    background:#d62828;
+    color:white;
+    text-align:center;
+    padding:70px 10%;
+}
+
+.breakdown h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.breakdown p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.gallery-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:22px;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.review-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.review-card h3{
+    color:#ff9900;
+    margin-bottom:12px;
 }
 
 .contact{
     background:#081c3a;
     color:white;
     padding:85px 7%;
-    scroll-margin-top:90px;
 }
 
 .contact .section-title h2{
@@ -142,7 +243,7 @@ nav ul li a:hover{
 
 .contact-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:22px;
 }
 
@@ -158,15 +259,11 @@ nav ul li a:hover{
     font-size:20px;
 }
 
-.whatsapp-btn{
-    display:inline-block;
+.contact-buttons{
     margin-top:35px;
-    padding:13px 24px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 footer{
@@ -177,65 +274,85 @@ footer{
     font-size:14px;
 }
 
-ul{
-    padding-left:22px;
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    border-radius:50px;
+    padding:12px 18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    z-index:9999;
 }
 
-li{
-    margin-bottom:10px;
+.whatsapp-float img{
+    width:28px;
+    height:28px;
 }
 
-@media(max-width:1100px){
+@media(max-width:900px){
     nav{
         flex-direction:column;
         gap:15px;
     }
 
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
+    .hero-text h1{
+        font-size:34px;
     }
 
-    .five-grid,
-    .contact-grid{
-        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    .hero-text p{
+        font-size:18px;
     }
-}
 
-@media(max-width:768px){
     .section{
-        padding:55px 6%;
-    }
-
-    .section-title h2{
-        font-size:30px;
-    }
-
-    .banner img{
-        max-height:420px;
+        padding:60px 6%;
     }
 }
 </style>
+
 </head>
 
 <body>
 
 <nav>
-<div class="logo">TRUFIX AUTO HUB LIMITED</div>
+<div class="logo">TRUFIX PNG</div>
 
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#repair">Vehicle Repair</a></li>
 <li><a href="#parts">Parts Supply</a></li>
-<li><a href="#vehicles">Used Vehicles</a></li>
 <li><a href="#fleet">Fleet Support</a></li>
-<li><a href="#management">5S Management</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#reviews">Reviews</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
 <div class="banner">
-<img src="banner-final.png?v=20260506" alt="TRUFIX AUTO HUB LIMITED Banner">
+<img src="banner-final.png?v=20260506" alt="TRUFIX PNG Banner">
+
+<div class="hero-text">
+<h1>TRUCK & AUTO REPAIR IN LAE</h1>
+<p>
+Professional Vehicle Repair • Breakdown Assistance • Fleet Support
+</p>
+
+<div class="hero-buttons">
+<a href="https://wa.me/67579360000" class="btn whatsapp-btn">
+Chat on WhatsApp
+</a>
+
+<a href="tel:+67579360000" class="btn call-btn">
+Call Now
+</a>
+</div>
+</div>
 </div>
 
 <section class="section" id="about">
@@ -254,8 +371,37 @@ We provide vehicle repair and maintenance, body paint services, automotive parts
 </p>
 <br>
 <p>
-Our company is committed to reliable service, professional workmanship, transparent communication, safety-focused operations, and long-term support for individual customers, business clients, fleet operators, construction companies, and project customers.
+We are committed to reliable service, professional workmanship, transparent communication, safety-focused operations, and long-term support for private customers, fleet operators, construction companies, transport operators, and project customers.
 </p>
+</div>
+</section>
+
+<section class="section">
+<div class="section-title">
+<h2>WHY CHOOSE TRUFIX PNG</h2>
+<p>Reliable service support for PNG customers</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>Experienced Mechanics</h3>
+<p>Professional repair support for trucks, fleet vehicles, and passenger vehicles.</p>
+</div>
+
+<div class="card">
+<h3>24/7 Breakdown Support</h3>
+<p>Fast roadside assistance and emergency support in Lae and surrounding areas.</p>
+</div>
+
+<div class="card">
+<h3>Fleet Maintenance</h3>
+<p>Reliable maintenance support for contractors, transport companies, and project fleets.</p>
+</div>
+
+<div class="card">
+<h3>Genuine Parts</h3>
+<p>Quality automotive and heavy equipment parts for reliable operations.</p>
+</div>
 </div>
 </section>
 
@@ -267,17 +413,29 @@ Our company is committed to reliable service, professional workmanship, transpar
 
 <div class="box">
 <p>
-TRUFIX AUTO HUB LIMITED provides professional vehicle repair and maintenance services for private customers, commercial operators, and fleet vehicles in Papua New Guinea.
+TRUFIX PNG provides professional repair and maintenance services for private customers, commercial operators, and fleet vehicles.
 </p>
 <br>
 <p>
-Our workshop services include engine service, diagnostics, brake service, suspension and steering repair, electrical troubleshooting, air-conditioning service, cooling system repair, fast maintenance, body paint, and panel work.
+Our workshop services include engine diagnostics, brake service, suspension repair, electrical troubleshooting, air-conditioning service, cooling system repair, fast maintenance, body paint, and panel work.
 </p>
 <br>
 <p>
-We focus on reliable workmanship, efficient repair turnaround, practical maintenance support, and accountable service for daily vehicle operations.
+We focus on reliable workmanship, efficient turnaround time, practical maintenance support, and accountable customer service.
 </p>
 </div>
+</section>
+
+<section class="breakdown">
+<h2>24/7 EMERGENCY BREAKDOWN ASSISTANCE</h2>
+<p>
+Truck breakdown? Vehicle not starting?
+Contact TRUFIX PNG for immediate roadside support.
+</p>
+
+<a href="https://wa.me/67579360000" class="btn whatsapp-btn">
+WhatsApp Emergency Support
+</a>
 </section>
 
 <section class="section" id="parts">
@@ -292,36 +450,11 @@ We supply automotive spare parts and heavy equipment components for commercial, 
 </p>
 <br>
 <p>
-Our automotive parts support includes engine parts, electrical parts, brake parts, suspension parts, filters, lubricants, batteries, belts, hoses, cooling system components, and common wear items.
+Our support includes engine parts, brake parts, filters, lubricants, batteries, cooling system components, hydraulic hoses, excavator parts, loader components, and general wear items.
 </p>
 <br>
 <p>
-Our heavy equipment parts support includes components for excavators, loaders, compact machinery, hydraulic systems, construction equipment, hydraulic hoses, filters, wear parts, and engine or system components.
-</p>
-<br>
-<p>
-We focus on reliability, availability, durability, and operational efficiency for customers who depend on vehicles and equipment every day.
-</p>
-</div>
-</section>
-
-<section class="section" id="vehicles">
-<div class="section-title">
-<h2>Quality Used Vehicles</h2>
-<p>Reliable vehicles for private, commercial, and fleet customers</p>
-</div>
-
-<div class="box">
-<p>
-TRUFIX AUTO HUB LIMITED provides inspected and reliable used vehicles for private customers, business operators, and fleet buyers.
-</p>
-<br>
-<p>
-We focus on vehicle quality, practical performance, serviceability, and long-term customer value.
-</p>
-<br>
-<p>
-Our vehicle solutions are suitable for personal transportation, commercial operations, construction projects, business fleets, and general PNG road conditions.
+We focus on reliability, durability, availability, and operational efficiency for customers who depend on vehicles and equipment every day.
 </p>
 </div>
 </section>
@@ -329,67 +462,74 @@ Our vehicle solutions are suitable for personal transportation, commercial opera
 <section class="section" id="fleet">
 <div class="section-title">
 <h2>Fleet Support</h2>
-<p>Reliable service support for business and project customers</p>
+<p>Reliable support for business and project customers</p>
 </div>
 
-<div class="box">
-<p>
-TRUFIX AUTO HUB LIMITED supports:
-</p>
-<br>
-<ul>
-<li>Corporate vehicle fleets</li>
-<li>Construction projects</li>
-<li>Commercial transport operators</li>
-<li>Mining and industrial operations</li>
-<li>Government and project vehicles</li>
-<li>Business customers requiring repair, parts, maintenance, and service reporting support</li>
-</ul>
-<br>
-<p>
-Our team focuses on reducing downtime, improving vehicle reliability, supporting preventive maintenance, and helping customers keep their daily operations running.
-</p>
+<div class="grid">
+<div class="card">
+<h3>Corporate Fleet</h3>
+<p>Maintenance support for company vehicles and transport operations.</p>
+</div>
+
+<div class="card">
+<h3>Construction Projects</h3>
+<p>Repair and maintenance support for project vehicles and equipment.</p>
+</div>
+
+<div class="card">
+<h3>Mining & Industrial</h3>
+<p>Reliable support for industrial and heavy-duty operations.</p>
+</div>
+
+<div class="card">
+<h3>Preventive Maintenance</h3>
+<p>Helping customers reduce downtime and improve reliability.</p>
+</div>
 </div>
 </section>
 
-<section class="section" id="management">
+<section class="section" id="gallery">
 <div class="section-title">
-<h2>5S Management System</h2>
-<p>Professional management and customer-focused service standards</p>
+<h2>Repair Gallery</h2>
+<p>Professional workshop and repair activities</p>
 </div>
 
-<div class="five-grid">
-<div class="card">
-<h3>Sort</h3>
-<p>Maintain an organized working environment by removing unnecessary items.</p>
+<div class="gallery-grid">
+<img src="truck-repair.jpg" alt="Truck Repair">
+<img src="engine-repair.jpg" alt="Engine Repair">
+<img src="workshop.jpg" alt="Workshop">
+<img src="breakdown-service.jpg" alt="Breakdown Service">
+</div>
+</section>
+
+<section class="section" id="reviews">
+<div class="section-title">
+<h2>Customer Reviews</h2>
+<p>Trusted by PNG customers</p>
 </div>
 
-<div class="card">
-<h3>Set in Order</h3>
-<p>Arrange tools, equipment, and materials systematically for efficient operations.</p>
+<div class="review-grid">
+<div class="review-card">
+<h3>★★★★★</h3>
+<p>Fast and reliable truck repair service in Lae.</p>
 </div>
 
-<div class="card">
-<h3>Shine</h3>
-<p>Ensure workshop cleanliness, safety, and professional presentation standards.</p>
+<div class="review-card">
+<h3>★★★★★</h3>
+<p>Professional mechanics and excellent customer support.</p>
 </div>
 
-<div class="card">
-<h3>Standardize</h3>
-<p>Implement consistent procedures and operational controls across service areas.</p>
-</div>
-
-<div class="card">
-<h3>Sustain</h3>
-<p>Promote continuous improvement, discipline, and long-term operational excellence.</p>
+<div class="review-card">
+<h3>★★★★★</h3>
+<p>Quick breakdown response and quality workmanship.</p>
 </div>
 </div>
 </section>
 
 <section class="contact" id="contact">
 <div class="section-title">
-<h2>Contact Us</h2>
-<p>We welcome inquiries from individual customers and corporate clients.</p>
+<h2>Contact TRUFIX PNG</h2>
+<p>We welcome inquiries from private and corporate customers.</p>
 </div>
 
 <div class="contact-grid">
@@ -413,32 +553,38 @@ Papua New Guinea
 
 <div class="contact-box">
 <h3>Email</h3>
-<p>trufix.automotor.png@gmail.com</p>
+<p>
+service@trufixpng.com
+</p>
 </div>
 
 <div class="contact-box">
 <h3>Facebook</h3>
-<p>TRUFIX AUTO HUB-LAE</p>
-</div>
-
-<div class="contact-box">
-<h3>Business Hours</h3>
 <p>
-Mon - Sat:<br>
-8:00 AM - 5:00 PM<br>
-24/7 Roadside Assistance Available
+TRUFIX AUTO HUB - LAE
 </p>
 </div>
 </div>
 
-<a href="https://wa.me/67579360000" class="whatsapp-btn">
-Contact Us on WhatsApp
+<div class="contact-buttons">
+<a href="https://wa.me/67579360000" class="btn whatsapp-btn">
+WhatsApp Us
 </a>
+
+<a href="tel:+67579360000" class="btn call-btn">
+Call Now
+</a>
+</div>
 </section>
 
 <footer>
 © 2026 TRUFIX AUTO HUB LIMITED. All Rights Reserved.
 </footer>
+
+<a href="https://wa.me/67579360000" class="whatsapp-float" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+<span>Chat on WhatsApp</span>
+</a>
 
 </body>
 </html>
