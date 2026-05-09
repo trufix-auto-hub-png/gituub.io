@@ -53,6 +53,7 @@ nav ul li a:hover{color:#ffcc00;}
 .banner{
     background:#081c3a;
     text-align:center;
+    position:relative;
 }
 
 .banner img{
@@ -61,6 +62,38 @@ nav ul li a:hover{color:#ffcc00;}
     object-fit:contain;
     display:block;
     margin:auto;
+}
+
+.banner-buttons{
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:1350px;
+    height:100%;
+    pointer-events:none;
+}
+
+.banner-whatsapp,
+.banner-call{
+    position:absolute;
+    display:block;
+    pointer-events:auto;
+}
+
+.banner-whatsapp{
+    left:2.5%;
+    bottom:13%;
+    width:20%;
+    height:8%;
+}
+
+.banner-call{
+    left:24%;
+    bottom:13%;
+    width:15%;
+    height:8%;
 }
 
 .section{
@@ -118,6 +151,7 @@ nav ul li a:hover{color:#ffcc00;}
     color:white;
     text-align:center;
     padding:70px 10%;
+    scroll-margin-top:90px;
 }
 
 .breakdown h2{
@@ -162,28 +196,11 @@ nav ul li a:hover{color:#ffcc00;}
     box-shadow:0 6px 18px rgba(0,0,0,0.12);
 }
 
-.review-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-
-.review-card{
-    background:white;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
-}
-
-.review-card h3{
-    color:#ff9900;
-    margin-bottom:12px;
-}
-
 .contact{
     background:#081c3a;
     color:white;
     padding:85px 7%;
+    scroll-margin-top:90px;
 }
 
 .contact .section-title h2{color:white;}
@@ -258,6 +275,20 @@ footer{
         max-height:420px;
     }
 
+    .banner-whatsapp{
+        left:2.5%;
+        bottom:13%;
+        width:22%;
+        height:8%;
+    }
+
+    .banner-call{
+        left:26%;
+        bottom:13%;
+        width:17%;
+        height:8%;
+    }
+
     .section{
         padding:55px 6%;
     }
@@ -295,6 +326,11 @@ footer{
 
 <div class="banner">
 <img src="banner-final.png?v=20260509" alt="TRUFIX PNG Truck and Auto Repair Banner">
+
+<div class="banner-buttons">
+<a href="https://wa.me/67579360000" class="banner-whatsapp" target="_blank" aria-label="Chat on WhatsApp"></a>
+<a href="tel:+67579360000" class="banner-call" aria-label="Call TRUFIX PNG"></a>
+</div>
 </div>
 
 <section class="section" id="about">
@@ -374,7 +410,7 @@ We focus on reliable workmanship, efficient turnaround time, practical maintenan
 Truck breakdown? Vehicle not starting? Contact TRUFIX PNG for immediate roadside support.
 </p>
 
-<a href="https://wa.me/67579360000" class="btn whatsapp-btn">
+<a href="https://wa.me/67579360000" class="btn whatsapp-btn" target="_blank">
 WhatsApp Emergency Support
 </a>
 </section>
@@ -439,30 +475,6 @@ Our support includes engine parts, brake parts, filters, lubricants, batteries, 
 </div>
 </section>
 
-<section class="section" id="reviews">
-<div class="section-title">
-<h2>Customer Reviews</h2>
-<p>Trusted by PNG customers</p>
-</div>
-
-<div class="review-grid">
-<div class="review-card">
-<h3>★★★★★</h3>
-<p>Fast and reliable truck repair service in Lae.</p>
-</div>
-
-<div class="review-card">
-<h3>★★★★★</h3>
-<p>Professional mechanics and excellent customer support.</p>
-</div>
-
-<div class="review-card">
-<h3>★★★★★</h3>
-<p>Quick breakdown response and quality workmanship.</p>
-</div>
-</div>
-</section>
-
 <section class="contact" id="contact">
 <div class="section-title">
 <h2>Contact TRUFIX PNG</h2>
@@ -500,7 +512,7 @@ Papua New Guinea
 </div>
 
 <div class="contact-buttons">
-<a href="https://wa.me/67579360000" class="btn whatsapp-btn">
+<a href="https://wa.me/67579360000" class="btn whatsapp-btn" target="_blank">
 WhatsApp Us
 </a>
 
