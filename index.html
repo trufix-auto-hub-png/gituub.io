@@ -262,48 +262,116 @@ footer{
 }
 
 @media(max-width:900px){
-    nav{
-        flex-direction:column;
-        gap:15px;
-    }
 
-    nav ul{
-        justify-content:center;
-    }
+nav{
+    flex-direction:column;
+    gap:12px;
+    padding:14px 5%;
+}
 
-    .banner img{
-        max-height:420px;
-    }
+.logo{
+    font-size:26px;
+}
 
-    .banner-whatsapp{
-        left:2.5%;
-        bottom:13%;
-        width:22%;
-        height:8%;
-    }
+nav ul{
+    justify-content:center;
+    gap:12px;
+}
 
-    .banner-call{
-        left:26%;
-        bottom:13%;
-        width:17%;
-        height:8%;
-    }
+nav ul li a{
+    font-size:14px;
+}
 
-    .section{
-        padding:55px 6%;
-    }
+.banner img{
+    width:100%;
+    max-height:none;
+    object-fit:cover;
+}
 
-    .section-title h2{
-        font-size:30px;
-    }
+/* 手机版隐藏Banner透明按钮 */
+.banner-buttons{
+    display:none;
+}
 
-    .breakdown h2{
-        font-size:30px;
-    }
+/* 手机版Section */
+.section{
+    padding:50px 6%;
+}
 
-    .whatsapp-float span{
-        display:none;
-    }
+.section-title h2{
+    font-size:30px;
+}
+
+.section-title p{
+    font-size:16px;
+}
+
+/* 手机版卡片 */
+.card{
+    padding:24px;
+}
+
+.card h3{
+    font-size:22px;
+}
+
+.card p{
+    font-size:16px;
+}
+
+/* Breakdown */
+.breakdown{
+    padding:55px 6%;
+}
+
+.breakdown h2{
+    font-size:30px;
+}
+
+.breakdown p{
+    font-size:18px;
+}
+
+/* 联系方式 */
+.contact{
+    padding:60px 6%;
+}
+
+/* 手机版按钮 */
+.btn{
+    width:100%;
+    text-align:center;
+    font-size:18px;
+    padding:16px;
+}
+
+/* WhatsApp浮动按钮 */
+.whatsapp-float{
+    bottom:15px;
+    right:15px;
+    padding:14px 18px;
+}
+
+.whatsapp-float img{
+    width:32px;
+    height:32px;
+}
+
+.whatsapp-float span{
+    font-size:16px;
+}
+
+/* 手机版联系方式 */
+.contact-box p{
+    font-size:16px;
+}
+
+/* 手机版正文 */
+body{
+    font-size:16px;
+    line-height:1.7;
+}
+
 }
 </style>
 </head>
